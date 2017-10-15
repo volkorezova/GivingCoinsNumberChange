@@ -76,7 +76,6 @@ int main() {
     
     //find quantity of 1 coins
     count_1 = mod_5 / ONE;
-    int mod_1 = mod_5 % ONE;
     printf("COUNT of 1 coins = %d\n", count_1);
     
     //display general count of coins
