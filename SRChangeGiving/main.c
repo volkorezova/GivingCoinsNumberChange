@@ -7,7 +7,6 @@
 //
 
 #include <stdio.h>
-//#include <math.h>
 
 const int FIFT = 50;
 const int TWENFY = 25;
