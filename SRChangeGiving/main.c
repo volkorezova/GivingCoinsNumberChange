@@ -27,12 +27,12 @@ int main() {
     int ok=0;
     
     for(;;){
-        printf("Enter value for giving number of coins(int - hryvnas; float - coins): ");
+        printf("\nEnter value for giving number of coins(int - hryvnas; float - coins): ");
         ok=scanf("%f", &income_f);
         
         //check is entered value char
         if (!ok){
-            printf("\nIt's a string. Pls enter correct value\n");
+            printf("It's a string. Pls enter correct value\n");
             fpurge(stdin);
             continue;
         }
@@ -42,7 +42,7 @@ int main() {
         
         //check is value lower than 0 or lower than 1 coin
         if (income <=0){
-            printf("\nCan't give a change. Enter positive and >= 1 coin value\n");
+            printf("Can't give a change. Enter positive and >= 1 coin value\n\n");
             continue;
         }
         break;
