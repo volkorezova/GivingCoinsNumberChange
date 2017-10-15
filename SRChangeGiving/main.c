@@ -7,7 +7,7 @@
 //
 
 #include <stdio.h>
-#include <math.h>
+//#include <math.h>
 
 const int FIFT = 50;
 const int TWENFY = 25;
@@ -27,28 +27,22 @@ int main() {
     int ok=0;
     
     for(;;){
-        printf("Enter value for giving number of coins: ");
+        printf("Enter value for giving number of coins(int - hryvnas; float - coins): ");
         ok=scanf("%f", &income_f);
         
         //check is entered value char
         if (!ok){
-            printf("It's a string. Pls enter correct value\n");
+            printf("\nIt's a string. Pls enter correct value\n");
             fpurge(stdin);
             continue;
         }
         
-        //check is entered value float or integer. If float - convert to integer
-        int x = ceil(income_f);
-        if (x == income_f){
-            income=income_f;
-        }
-        else{
+        //convert to integer (coins)
             income=income_f * 100;
-        }
         
         //check is value lower than 0 or lower than 1 coin
         if (income <=0){
-            printf("Can't give a change. Enter positive and >= 1 coin value\n");
+            printf("\nCan't give a change. Enter positive and >= 1 coin value\n");
             continue;
         }
         break;
